@@ -15,6 +15,7 @@ Use this skill when the user asks for:
 - Weekly, monthly, or quarterly technology trends
 - AI, SaaS, developer tools, cloud, security, startup, or regulation updates
 - Model reranking, leaderboard changes, and current top model summaries
+- Claude managed agents, Claude agent teams, and Anthropic agent platform updates
 - GitHub Trending and open-source momentum summaries
 - Market signal summaries for planning, investing, product strategy, or competitive tracking
 - A concise report that distinguishes major shifts from ordinary news
@@ -24,6 +25,7 @@ Trigger examples:
 ```text
 Write this week's AI trend report
 Show current top 10 AI models and ranking changes
+Track Claude managed agents and agent teams updates
 Generate a trend radar for developer tools
 Summarize GitHub Trending for AI agents this month
 Summarize recent market trends in AI agents
@@ -35,12 +37,13 @@ What changed in SaaS and AI this week?
 1. Define the report period. Default to `1w` unless the user specifies `1w`, `1m`, `3m`, or an exact date range.
 2. Search by category, not only by generic keywords. Combine company names, product names, ecosystem terms, and event types.
 3. Check model leaderboards for reranking, new entrants, score deltas, and category shifts.
-4. Check GitHub Trending and repository momentum for relevant categories, languages, and keywords.
-5. Prefer primary and high-signal sources before commentary.
-6. Cross-check major claims with at least two credible sources when possible.
-7. Deduplicate repeated coverage of the same announcement.
-8. Score each item by novelty, impact, source quality, ranking movement, open-source traction, and actionability.
-9. Separate confirmed facts from interpretation. Label uncertain items as `Watch`.
+4. Check Anthropic and Claude agent platform updates, especially managed agents, agent teams, enterprise controls, connectors, and orchestration features.
+5. Check GitHub Trending and repository momentum for relevant categories, languages, and keywords.
+6. Prefer primary and high-signal sources before commentary.
+7. Cross-check major claims with at least two credible sources when possible.
+8. Deduplicate repeated coverage of the same announcement.
+9. Score each item by novelty, impact, source quality, ranking movement, open-source traction, and actionability.
+10. Separate confirmed facts from interpretation. Label uncertain items as `Watch`.
 
 ## Time Windows
 
@@ -62,6 +65,7 @@ Use higher-priority sources first:
 |----------|-------------|----------|
 | 1 | Official announcements | company blogs, product release notes, API changelogs, pricing pages |
 | 1 | Primary technical artifacts | GitHub releases, RFCs, benchmark reports, model cards, research papers |
+| 1 | Anthropic / Claude updates | Anthropic news, Claude docs, Claude Code docs, API changelog, enterprise admin docs |
 | 1 | Model leaderboards | LMArena/Text Arena, Artificial Analysis, LiveBench, SWE-bench, OpenRouter rankings |
 | 1 | GitHub momentum | GitHub Trending, stars, forks, releases, issue velocity, contributor activity |
 | 2 | Business records | funding announcements, acquisition news, earnings calls, regulatory filings |
@@ -69,6 +73,26 @@ Use higher-priority sources first:
 | 3 | Community signals | Hacker News, Reddit, X posts, Discord/Slack communities, GitHub stars/issues |
 
 Community signals should support a trend, not be the only evidence for a high-impact claim.
+
+## Anthropic / Claude Agent Signals
+
+Track Claude agent platform changes as a dedicated signal family. Include both official product updates and ecosystem reactions when they affect how teams build, deploy, or govern agents.
+
+Monitor these topics:
+
+- **Claude managed agents**: hosted agents, managed execution, background tasks, schedules, permissions, observability, and lifecycle management
+- **Claude agent teams**: multi-agent collaboration, team workspaces, handoffs, shared memory, role assignment, approval flows, and delegation patterns
+- **Claude Code and developer agents**: CLI updates, IDE integrations, repo context, code review, test execution, MCP support, and automation workflows
+- **Enterprise controls**: admin policy, audit logs, identity, data retention, connectors, compliance, sandboxing, and human-in-the-loop review
+- **API and platform primitives**: tool use, computer use, MCP, files, sessions, workflows, web search, batch jobs, and rate/pricing changes
+
+For each Claude agent signal, capture:
+
+- **What changed**: product, API, docs, pricing, availability, or policy
+- **Affected users**: individual developers, product teams, enterprise admins, platform teams, or agent builders
+- **Core change**: managed execution, multi-agent coordination, governance, connector expansion, or deployment workflow
+- **Evidence**: official Anthropic source first; add credible secondary analysis only when useful
+- **Action**: try, migrate, monitor, update policy, or compare with OpenAI/Codex/Gemini/Copilot alternatives
 
 ## Model Reranking Signals
 
@@ -110,6 +134,7 @@ For each notable repository, capture:
 - Models: OpenAI, Anthropic, Google Gemini, Meta Llama, Mistral, xAI, DeepSeek
 - Agent frameworks: LangChain, LangGraph, AutoGen, CrewAI, OpenAI Agents SDK
 - Capabilities: multimodal AI, coding agents, RAG, long context, reasoning, evaluation
+- Claude agents: managed agents, agent teams, Claude Code, MCP, tool use, computer use, enterprise controls
 - Business signals: AI startup funding, enterprise adoption, AI pricing, AI regulation
 - Benchmarks and reranking: LMArena/Text Arena, Artificial Analysis, LiveBench, SWE-bench, OpenRouter, model cards, eval reports
 
@@ -118,6 +143,7 @@ For each notable repository, capture:
 - Coding assistants: Codex, GitHub Copilot, Cursor, Claude Code, Windsurf
 - Dev platforms: GitHub, GitLab, Linear, Vercel, Netlify, Supabase
 - Tooling: CI/CD, observability, testing, package managers, IDE extensions
+- Agent platforms: Claude managed agents, Claude agent teams, Codex agents, Copilot coding agent, Gemini agents
 - GitHub Trending: fast-growing repos, new frameworks, agent tools, MCP servers, CLIs, infra templates
 
 ### SaaS/Productivity
@@ -138,9 +164,9 @@ For each notable repository, capture:
 
 - Seed to IPO funding, acquisitions, shutdowns, category creation, Korean startups, global AI startups
 
-### OpenClaw Ecosystem
+### Agent Platform Ecosystem
 
-- Anthropic announcements, Claude API updates, community showcases, OpenClaw, HarnessClaw
+- Anthropic/Claude, OpenAI/Codex, Google/Gemini, Microsoft/GitHub Copilot, MCP ecosystem, managed agents, agent teams, community showcases, OpenClaw, HarnessClaw
 
 ## Scoring Criteria
 
@@ -163,7 +189,7 @@ Use this structure for readable output:
 **Period**: YYYY-MM-DD to YYYY-MM-DD  
 **Window**: 1w / 1m / 3m  
 **Generated**: YYYY-MM-DD  
-**Scope**: AI/ML, Developer Tools, SaaS, Cloud/Infra, Security, Startup/Funding, OpenClaw  
+**Scope**: AI/ML, Developer Tools, SaaS, Cloud/Infra, Security, Startup/Funding, Agent Platform Ecosystem  
 **Signal Count**: 00 reviewed, 00 selected
 
 ## Executive Summary
@@ -172,6 +198,7 @@ Use this structure for readable output:
 - **1m signal**: ...
 - **3m signal**: ...
 - **Model reranking**: ...
+- **Claude agent signal**: ...
 - **Biggest opportunity**: ...
 - **Biggest risk**: ...
 - **Recommended action**: ...
@@ -204,6 +231,13 @@ Use this structure for readable output:
 | 4 | ... | ... | score / usage | 0 | ... |
 | 5 | ... | ... | score / usage | +2 | ... |
 
+## Claude Agent Watch
+
+| Signal | Area | Window | Status | Core Change | Action |
+|--------|------|--------|--------|-------------|--------|
+| ... | managed agents | 1w | Confirmed | ... | ... |
+| ... | agent teams | 1m | Watch | ... | ... |
+
 ## Action Items
 
 - [ ] ...
@@ -222,6 +256,7 @@ Use this structure for readable output:
 - **What changed**: ...
 - **Why it matters**: ...
 - **Evidence**: [Source name](URL), [Source name](URL)
+- **Claude agent signal**: managed agents / agent teams / Claude Code / API primitive if relevant
 - **Model reranking**: leaderboard, rank, score/usage, change reason if relevant
 - **GitHub signal**: repo link, stars/forks/releases if relevant
 - **Impact window**: immediate / 1-3 months / 6-12 months
@@ -237,6 +272,7 @@ Use this structure for readable output:
 - **What changed**: ...
 - **Why it matters**: ...
 - **Evidence**: [Source name](URL)
+- **Claude agent signal**: managed agents / agent teams / Claude Code / API primitive if relevant
 - **Model reranking**: leaderboard, rank, score/usage, change reason if relevant
 - **GitHub signal**: repo link, stars/forks/releases if relevant
 - **Impact window**: ...
@@ -273,6 +309,7 @@ Generated by `tech-trend-radar`.
 - Use tables for comparison, especially across `1w`, `1m`, and `3m` windows.
 - Include links for every important claim.
 - For model reranking, include the leaderboard name, timestamp, metric definition, and current top 10.
+- For Claude agent updates, prefer official Anthropic sources and extract the core change, affected users, and recommended action.
 - Include GitHub repository links for open-source signals.
 - Avoid hype words unless the evidence supports them.
 - Do not mix facts and speculation. Use `Confirmed`, `Watch`, or `Rumor`.
@@ -349,6 +386,16 @@ Format:
     ],
     "coreChanges": ["..."]
   },
+  "claudeAgentSignals": [
+    {
+      "signal": "...",
+      "area": "managed agents",
+      "window": "1w",
+      "status": "Confirmed",
+      "coreChange": "...",
+      "action": "..."
+    }
+  ],
   "signalsReviewed": 96,
   "signalsSelected": 12,
   "criticalSignals": 3
@@ -367,12 +414,13 @@ Example:
 
 ```json
 {
-  "AI/ML": ["OpenAI", "Claude", "Gemini", "Llama", "AI agents", "SWE-bench", "model reranking"],
+  "AI/ML": ["OpenAI", "Claude", "Gemini", "Llama", "AI agents", "SWE-bench", "model reranking", "Claude managed agents", "Claude agent teams"],
+  "Claude Agents": ["Claude managed agents", "Claude agent teams", "Claude Code", "Anthropic agents", "MCP", "tool use", "computer use", "agent orchestration", "enterprise controls", "connectors"],
   "Model Reranking": ["LMArena", "Text Arena", "Artificial Analysis", "LiveBench", "SWE-bench", "OpenRouter rankings", "top 10 AI models"],
-  "Developer Tools": ["Codex", "GitHub Copilot", "Cursor", "Vercel", "LangGraph", "GitHub Trending"],
+  "Developer Tools": ["Codex", "GitHub Copilot", "Cursor", "Claude Code", "Vercel", "LangGraph", "GitHub Trending"],
   "GitHub Trending": ["AI", "LLM", "agent", "RAG", "MCP", "devtools", "security", "TypeScript", "Python", "Rust", "Go"],
   "SaaS": ["Notion AI", "Linear", "Slack AI"],
-  "OpenClaw": ["OpenClaw", "HarnessClaw", "Claude API"],
+  "Agent Platform Ecosystem": ["Anthropic", "Claude API", "Claude managed agents", "Claude agent teams", "Claude Code", "OpenAI", "Codex", "OpenAI Agents SDK", "Google Gemini", "Gemini agents", "GitHub Copilot", "Copilot coding agent", "MCP", "OpenClaw", "HarnessClaw"],
   "windows": ["1w", "1m", "3m"]
 }
 ```

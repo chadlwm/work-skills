@@ -7,7 +7,7 @@
 - Tracks `1w`, `1m`, and `3m` windows to separate short-term spikes from durable trends.
 - Monitors AI model reranking from LMArena/Text Arena, Artificial Analysis, LiveBench, SWE-bench, and OpenRouter.
 - Captures GitHub Trending momentum, including stars, forks, releases, issue velocity, and contributor activity.
-- Covers AI/ML, developer tools, SaaS, cloud infrastructure, security, startups, funding, regulation, and OpenClaw ecosystem updates.
+- Covers AI/ML, agent platform ecosystem updates, developer tools, SaaS, cloud infrastructure, security, startups, funding, and regulation.
 - Produces structured reports with executive summaries, top signals, action items, category deep dives, sources, and watchlists.
 
 ## Usage Examples
@@ -17,6 +17,7 @@ Use prompts like:
 ```text
 Write this week's AI trend report
 Show current top 10 AI models and ranking changes
+Track Claude managed agents and agent teams updates
 Generate a trend radar for developer tools
 Summarize GitHub Trending for AI agents this month
 What changed in SaaS and AI this week?
@@ -27,6 +28,7 @@ What changed in SaaS and AI this week?
 Prioritize primary and high-signal sources:
 
 - Official company blogs, release notes, changelogs, pricing pages
+- Anthropic news, Claude docs, Claude Code docs, API changelog, enterprise admin docs
 - GitHub releases, GitHub Trending, repository activity, RFCs
 - Model leaderboards and evals: LMArena/Text Arena, Artificial Analysis, LiveBench, SWE-bench, OpenRouter
 - Funding announcements, acquisitions, earnings calls, regulatory filings
