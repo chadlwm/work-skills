@@ -16,6 +16,7 @@ Use this skill when the user asks for:
 - AI, SaaS, developer tools, cloud, security, startup, or regulation updates
 - Model reranking, leaderboard changes, and current top model summaries
 - Claude managed agents, Claude agent teams, and Anthropic agent platform updates
+- OpenAI, Anthropic, Google, Microsoft, Meta, xAI, and major AI lab strategy updates
 - GitHub Trending and open-source momentum summaries
 - Market signal summaries for planning, investing, product strategy, or competitive tracking
 - A concise report that distinguishes major shifts from ordinary news
@@ -44,6 +45,7 @@ What changed in SaaS and AI this week?
 8. Deduplicate repeated coverage of the same announcement.
 9. Score each item by novelty, impact, source quality, ranking movement, open-source traction, and actionability.
 10. Separate confirmed facts from interpretation. Label uncertain items as `Watch`.
+11. Re-check the latest available sources every run, even if the same topic appeared in a previous report.
 
 ## Time Windows
 
@@ -56,6 +58,28 @@ Use three standard windows to separate short-term noise from durable trends:
 | `3m` | Quarterly shift | platform changes, durable market direction, ecosystem consolidation |
 
 When reporting multiple windows, compare them explicitly: `1w = new spike`, `1m = traction`, `3m = durable direction`.
+
+## Freshness and Continuity Rules
+
+Each report must include the newest available information for its period. Do not omit an important topic because it appeared in an earlier report.
+
+- **Always refresh**: rerun searches for model rankings, company strategy, product launches, regulatory actions, GitHub Trending, and agent platform updates.
+- **Show the delta**: when a topic repeats, state what changed since the previous mention: new date, new source, rank movement, adoption signal, pricing change, policy update, or ecosystem reaction.
+- **Label continuity**: mark repeated topics as `Continuing`, `Updated`, or `Resolved`.
+- **Prefer dated evidence**: include publication dates or checked timestamps for all current claims.
+- **Reject stale summaries**: do not rely only on an older saved report when the user asks for the latest period.
+
+## Required Depth
+
+Reports should be concise but not shallow. For monthly or quarterly reports, each selected signal must include enough detail to support judgment:
+
+- **What happened**: 2-4 concrete facts with dates, actors, product names, or metrics
+- **Why it matters**: strategic, technical, market, regulatory, or developer impact
+- **Evidence**: at least one direct source link; use two sources for high-impact claims when possible
+- **Core change**: what is different from the previous period or previous report
+- **Action**: monitor, test, migrate, compare, budget, update policy, or ignore
+
+Avoid top-list-only reports. A Top 10 table is a navigation aid, not the analysis.
 
 ## Source Priority
 
@@ -94,6 +118,20 @@ For each Claude agent signal, capture:
 - **Evidence**: official Anthropic source first; add credible secondary analysis only when useful
 - **Action**: try, migrate, monitor, update policy, or compare with OpenAI/Codex/Gemini/Copilot alternatives
 
+## Company Strategy Signals
+
+Track strategic changes from major AI companies every run, especially OpenAI and Anthropic. Include Google, Microsoft/GitHub, Meta, xAI, Mistral, DeepSeek, and other major labs when relevant.
+
+For each company strategy item, capture:
+
+- **Company**: OpenAI, Anthropic, Google, Microsoft/GitHub, Meta, xAI, Mistral, DeepSeek, or other
+- **Latest move**: product launch, model release, pricing, partnership, safety policy, enterprise push, developer platform shift, acquisition, hiring, or regulation response
+- **Strategic direction**: models, agents, consumer apps, enterprise, coding, infrastructure, safety, open source, or distribution
+- **Evidence**: official source first; add credible analysis or market data when useful
+- **Implication**: what builders, buyers, investors, or competitors should do next
+
+Monthly reports must include a `Company Strategy Watch` section with at least OpenAI and Anthropic, even if there is no major change. In that case, write `No major new public move found` and cite the latest checked sources.
+
 ## Model Reranking Signals
 
 Track AI model ranking movement as a dedicated signal. Always state which leaderboard is used because rankings measure different things:
@@ -113,6 +151,8 @@ For each reranking item, capture:
 - **Why it changed**: model release, benchmark update, price change, context window, tool use, coding quality, availability
 - **Impact**: product choice, API routing, coding workflow, cost strategy, or competitive positioning
 - **Confidence**: high when leaderboard source and timestamp are clear; lower when based on secondary summaries
+
+Monthly and quarterly reports must include a full Top 10 model table, not only a short summary. Include rank, model, provider, metric, leaderboard, checked timestamp, rank change if available, and the reason for notable movement.
 
 ## GitHub Trending Signals
 
@@ -136,6 +176,7 @@ For each notable repository, capture:
 - Capabilities: multimodal AI, coding agents, RAG, long context, reasoning, evaluation
 - Claude agents: managed agents, agent teams, Claude Code, MCP, tool use, computer use, enterprise controls
 - Business signals: AI startup funding, enterprise adoption, AI pricing, AI regulation
+- Company strategy: OpenAI, Anthropic, Google, Microsoft/GitHub, Meta, xAI, Mistral, DeepSeek
 - Benchmarks and reranking: LMArena/Text Arena, Artificial Analysis, LiveBench, SWE-bench, OpenRouter, model cards, eval reports
 
 ### Developer Tools
@@ -199,6 +240,8 @@ Use this structure for readable output:
 - **3m signal**: ...
 - **Model reranking**: ...
 - **Claude agent signal**: ...
+- **Company strategy**: ...
+- **Updated from previous report**: ...
 - **Biggest opportunity**: ...
 - **Biggest risk**: ...
 - **Recommended action**: ...
@@ -223,13 +266,18 @@ Use this structure for readable output:
 **Leaderboard**: LMArena / Artificial Analysis / LiveBench / SWE-bench / OpenRouter  
 **Checked**: YYYY-MM-DD HH:MM TZ  
 
-| Rank | Model | Provider | Metric | Change | Core Reason |
-|------|-------|----------|--------|--------|-------------|
-| 1 | ... | ... | score / usage | +0 | ... |
-| 2 | ... | ... | score / usage | -1 | ... |
-| 3 | ... | ... | score / usage | new | ... |
-| 4 | ... | ... | score / usage | 0 | ... |
-| 5 | ... | ... | score / usage | +2 | ... |
+| Rank | Model | Provider | Metric | Leaderboard | Change | Core Reason |
+|------|-------|----------|--------|-------------|--------|-------------|
+| 1 | ... | ... | score / usage | ... | +0 | ... |
+| 2 | ... | ... | score / usage | ... | -1 | ... |
+| 3 | ... | ... | score / usage | ... | new | ... |
+| 4 | ... | ... | score / usage | ... | 0 | ... |
+| 5 | ... | ... | score / usage | ... | +2 | ... |
+| 6 | ... | ... | score / usage | ... | ... | ... |
+| 7 | ... | ... | score / usage | ... | ... | ... |
+| 8 | ... | ... | score / usage | ... | ... | ... |
+| 9 | ... | ... | score / usage | ... | ... | ... |
+| 10 | ... | ... | score / usage | ... | ... | ... |
 
 ## Claude Agent Watch
 
@@ -237,6 +285,15 @@ Use this structure for readable output:
 |--------|------|--------|--------|-------------|--------|
 | ... | managed agents | 1w | Confirmed | ... | ... |
 | ... | agent teams | 1m | Watch | ... | ... |
+
+## Company Strategy Watch
+
+| Company | Latest Move | Strategy Direction | Window | Status | Implication |
+|---------|-------------|--------------------|--------|--------|-------------|
+| OpenAI | ... | agents / models / apps / enterprise | 1m | Updated | ... |
+| Anthropic | ... | agents / coding / enterprise / safety | 1m | Updated | ... |
+| Google | ... | models / ecosystem / distribution | 1m | Watch | ... |
+| Microsoft/GitHub | ... | developer tools / enterprise | 1m | Watch | ... |
 
 ## Action Items
 
@@ -255,8 +312,10 @@ Use this structure for readable output:
 - **Window**: 1w / 1m / 3m
 - **What changed**: ...
 - **Why it matters**: ...
+- **Core change since last report**: new / updated / continuing / resolved
 - **Evidence**: [Source name](URL), [Source name](URL)
 - **Claude agent signal**: managed agents / agent teams / Claude Code / API primitive if relevant
+- **Company strategy**: company, strategic direction, latest move if relevant
 - **Model reranking**: leaderboard, rank, score/usage, change reason if relevant
 - **GitHub signal**: repo link, stars/forks/releases if relevant
 - **Impact window**: immediate / 1-3 months / 6-12 months
@@ -271,8 +330,10 @@ Use this structure for readable output:
 - **Window**: 1w / 1m / 3m
 - **What changed**: ...
 - **Why it matters**: ...
+- **Core change since last report**: new / updated / continuing / resolved
 - **Evidence**: [Source name](URL)
 - **Claude agent signal**: managed agents / agent teams / Claude Code / API primitive if relevant
+- **Company strategy**: company, strategic direction, latest move if relevant
 - **Model reranking**: leaderboard, rank, score/usage, change reason if relevant
 - **GitHub signal**: repo link, stars/forks/releases if relevant
 - **Impact window**: ...
@@ -305,12 +366,14 @@ Generated by `tech-trend-radar`.
 ## Writing Guidelines
 
 - Lead with the conclusion, then provide evidence.
-- Keep each signal compact: one short paragraph or 4-6 bullets.
+- Keep each signal detailed enough to be useful: one short paragraph plus 4-8 evidence bullets for major signals.
 - Use tables for comparison, especially across `1w`, `1m`, and `3m` windows.
 - Include links for every important claim.
 - For model reranking, include the leaderboard name, timestamp, metric definition, and current top 10.
+- For OpenAI and Anthropic strategy, include latest public moves, strategic direction, and implication in every monthly report.
 - For Claude agent updates, prefer official Anthropic sources and extract the core change, affected users, and recommended action.
 - Include GitHub repository links for open-source signals.
+- If a topic was included in a previous report, still refresh it and write the newest delta.
 - Avoid hype words unless the evidence supports them.
 - Do not mix facts and speculation. Use `Confirmed`, `Watch`, or `Rumor`.
 - When data is missing, say what is missing and how that affects confidence.
@@ -386,6 +449,24 @@ Format:
     ],
     "coreChanges": ["..."]
   },
+  "companyStrategy": [
+    {
+      "company": "OpenAI",
+      "latestMove": "...",
+      "strategyDirection": "...",
+      "window": "1m",
+      "status": "Updated",
+      "implication": "..."
+    },
+    {
+      "company": "Anthropic",
+      "latestMove": "...",
+      "strategyDirection": "...",
+      "window": "1m",
+      "status": "Updated",
+      "implication": "..."
+    }
+  ],
   "claudeAgentSignals": [
     {
       "signal": "...",
@@ -415,6 +496,7 @@ Example:
 ```json
 {
   "AI/ML": ["OpenAI", "Claude", "Gemini", "Llama", "AI agents", "SWE-bench", "model reranking", "Claude managed agents", "Claude agent teams"],
+  "Company Strategy": ["OpenAI strategy", "Anthropic strategy", "Google AI strategy", "Microsoft AI strategy", "Meta AI strategy", "xAI strategy", "AI pricing", "enterprise AI", "consumer AI apps", "agent platform strategy"],
   "Claude Agents": ["Claude managed agents", "Claude agent teams", "Claude Code", "Anthropic agents", "MCP", "tool use", "computer use", "agent orchestration", "enterprise controls", "connectors"],
   "Model Reranking": ["LMArena", "Text Arena", "Artificial Analysis", "LiveBench", "SWE-bench", "OpenRouter rankings", "top 10 AI models"],
   "Developer Tools": ["Codex", "GitHub Copilot", "Cursor", "Claude Code", "Vercel", "LangGraph", "GitHub Trending"],
