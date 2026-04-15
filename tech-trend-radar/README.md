@@ -7,7 +7,7 @@
 - Tracks `1w`, `1m`, and `3m` windows to separate short-term spikes from durable trends.
 - Monitors AI model reranking from LMArena/Text Arena, Artificial Analysis, LiveBench, SWE-bench, and OpenRouter.
 - Requires a full current Top 10 model table for monthly and quarterly reports.
-- Tracks OpenAI, Anthropic, Google, Microsoft/GitHub, Meta, xAI, and other AI lab strategy changes.
+- Tracks OpenAI, Anthropic, Alibaba Qwen/通义千问, Zhipu GLM/智谱, Google, Microsoft/GitHub, Meta, xAI, and other AI lab strategy changes.
 - Captures GitHub Trending momentum, including stars, forks, releases, issue velocity, and contributor activity.
 - Covers AI/ML, agent platform ecosystem updates, developer tools, SaaS, cloud infrastructure, security, startups, funding, and regulation.
 - Produces structured reports with executive summaries, top signals, company strategy watch, action items, category deep dives, sources, and watchlists.
@@ -33,7 +33,7 @@ Prioritize primary and high-signal sources:
 - Anthropic news, Claude docs, Claude Code docs, API changelog, enterprise admin docs
 - GitHub releases, GitHub Trending, repository activity, RFCs
 - Model leaderboards and evals: LMArena/Text Arena, Artificial Analysis, LiveBench, SWE-bench, OpenRouter
-- Company strategy sources: OpenAI, Anthropic, Google, Microsoft/GitHub, Meta, xAI, Mistral, DeepSeek official news and docs
+- Company strategy sources: OpenAI, Anthropic, Alibaba/Tongyi Qianwen/Qwen, Zhipu AI/GLM, Google, Microsoft/GitHub, Meta, xAI, Mistral, DeepSeek official news and docs
 - Funding announcements, acquisitions, earnings calls, regulatory filings
 - Trusted industry media and community signals when they support stronger evidence
 
@@ -41,7 +41,8 @@ Prioritize primary and high-signal sources:
 
 - Refresh latest sources every run, even when the topic appeared in an earlier report.
 - Monthly and quarterly reports must include a full Top 10 model ranking table.
-- Monthly reports must include OpenAI and Anthropic strategy updates or explicitly state no major new public move was found.
+- Monthly reports must include OpenAI, Anthropic, Alibaba Qwen, and Zhipu AI strategy updates or explicitly state no major new public move was found.
+- Model ranking sections should check domestic models such as Qwen/通义千问, GLM/智谱, DeepSeek, Kimi, ERNIE/文心, Hunyuan/混元, and Doubao/豆包 when relevant.
 - Each major signal should include facts, dates, evidence links, core change since the last report, and recommended action.
 
 ## Report Output
