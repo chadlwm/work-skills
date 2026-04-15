@@ -37,15 +37,15 @@ Prioritize primary and high-signal sources:
 Default report path:
 
 ```text
-memory/research/trend-YYYY-WXX.md
+memory/research/tech-trend-radar-YYYY-WXX.md
 ```
 
 Scoped report examples:
 
 ```text
-memory/research/trend-ai-agents-YYYY-WXX.md
-memory/research/trend-ai-agents-1m-YYYY-MM.md
-memory/research/trend-ai-agents-3m-YYYY-QN.md
+memory/research/tech-trend-radar-ai-agents-YYYY-WXX.md
+memory/research/tech-trend-radar-ai-agents-1m-YYYY-MM.md
+memory/research/tech-trend-radar-ai-agents-3m-YYYY-QN.md
 ```
 
 ## Skill Files

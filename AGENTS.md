@@ -5,8 +5,7 @@
 This repository stores local skill packages. Each skill lives in its own top-level directory, such as `tech-trend-radar/`.
 
 - `tech-trend-radar/SKILL.md`: main skill definition, including frontmatter, usage instructions, report format, and customization notes.
-- `tech-trend-radar/_meta.json`: registry metadata for the published skill.
-- `tech-trend-radar/.clawhub/origin.json`: installation source metadata from ClawHub.
+- `tech-trend-radar/README.md`: skill-specific usage, output paths, and maintenance notes.
 
 Keep skill-specific docs and assets inside the related skill directory. Add new skills as sibling directories with their own `SKILL.md`.
 
@@ -43,8 +42,8 @@ Use lowercase, hyphenated directory names for skills, for example `tech-trend-ra
 No formal tests are present. For documentation-only changes, manually verify Markdown structure, examples, and any JSON snippets. For metadata changes, ensure JSON files remain valid:
 
 ```bash
-python -m json.tool tech-trend-radar/_meta.json
-python -m json.tool tech-trend-radar/.clawhub/origin.json
+sed -n '1,120p' tech-trend-radar/README.md
+sed -n '1,120p' tech-trend-radar/SKILL.md
 ```
 
 When adding executable scripts or generated outputs, include a clear command for reproducing or validating them in the skill documentation.
