@@ -1,180 +1,266 @@
 ---
-name: trend-radar
-description: Tech/market trend weekly auto-report
-author: Chad
+name: tech-trend-radar
+description: Use when generating current technology, product, startup, funding, regulation, or market trend reports from recent industry updates
+author: Chad Liu
 ---
 
-# trend-radar
+# Trend Radar
 
-Skill that automatically monitors tech and market trends and generates weekly reports.
+Generate a weekly industry trend report from recent, credible technology and market updates. Prioritize fresh signals, source quality, business impact, and clear next actions.
 
-## Features
+## When to Use
 
-- Web search based on keyword list (utilizing `web_search`)
-- Categories: AI, SaaS, Korean startups, OpenClaw ecosystem
-- Weekly change detection + importance score (1-10)
-- Result: `memory/research/trend-YYYY-WXX.md`
-- Cron integration: Auto-execute every Monday 09:00
+Use this skill when the user asks for:
 
-## Usage
+- Weekly or recent technology trends
+- AI, SaaS, developer tools, cloud, security, startup, or regulation updates
+- Market signal summaries for planning, investing, product strategy, or competitive tracking
+- A concise report that distinguishes major shifts from ordinary news
 
-Trigger keywords:
-- "trends"
-- "trend radar"
-- "this week's trends"
-- "market trends"
+Trigger examples:
 
-Example:
-```
+```text
 Write this week's AI trend report
+Generate a trend radar for developer tools
+Summarize recent market trends in AI agents
+What changed in SaaS and AI this week?
 ```
 
-## Monitoring Keywords
+## Research Workflow
+
+1. Define the report period. Default to the last 7 days unless the user specifies a date range.
+2. Search by category, not only by generic keywords. Combine company names, product names, ecosystem terms, and event types.
+3. Prefer primary and high-signal sources before commentary.
+4. Cross-check major claims with at least two credible sources when possible.
+5. Deduplicate repeated coverage of the same announcement.
+6. Score each item by novelty, impact, source quality, and actionability.
+7. Separate confirmed facts from interpretation. Label uncertain items as `Watch`.
+
+## Source Priority
+
+Use higher-priority sources first:
+
+| Priority | Source Type | Examples |
+|----------|-------------|----------|
+| 1 | Official announcements | company blogs, product release notes, API changelogs, pricing pages |
+| 1 | Primary technical artifacts | GitHub releases, RFCs, benchmark reports, model cards, research papers |
+| 2 | Business records | funding announcements, acquisition news, earnings calls, regulatory filings |
+| 2 | Trusted industry media | The Verge, TechCrunch, The Information, Stratechery, VentureBeat, The Pragmatic Engineer |
+| 3 | Community signals | Hacker News, Reddit, X posts, Discord/Slack communities, GitHub stars/issues |
+
+Community signals should support a trend, not be the only evidence for a high-impact claim.
+
+## Monitoring Categories
 
 ### AI/ML
-- Claude, GPT-5, Gemini, Llama, deppagents, langchain, langgraph
-- AI agents, RAG, multimodal AI
-- AI startup funding
-- AI regulation
-- AI Models Randking top5
-- Harness Trends
+
+- Models: OpenAI, Anthropic, Google Gemini, Meta Llama, Mistral, xAI, DeepSeek
+- Agent frameworks: LangChain, LangGraph, AutoGen, CrewAI, OpenAI Agents SDK
+- Capabilities: multimodal AI, coding agents, RAG, long context, reasoning, evaluation
+- Business signals: AI startup funding, enterprise adoption, AI pricing, AI regulation
+- Benchmarks: LMSYS, SWE-bench, Artificial Analysis, model cards, eval reports
+
+### Developer Tools
+
+- Coding assistants: Codex, GitHub Copilot, Cursor, Claude Code, Windsurf
+- Dev platforms: GitHub, GitLab, Linear, Vercel, Netlify, Supabase
+- Tooling: CI/CD, observability, testing, package managers, IDE extensions
 
 ### SaaS/Productivity
-- Notion AI, Linear, Slack AI
-- Low-code/No-code platforms
-- Developer tools (Claude, Codex, GitHub Copilot, Cursor)
+
+- Notion, Slack, Linear, Atlassian, Salesforce, HubSpot, Microsoft 365, Google Workspace
+- AI features, workflow automation, collaboration, pricing, enterprise adoption
+
+### Cloud/Infrastructure
+
+- AWS, Azure, Google Cloud, Cloudflare, Docker, Kubernetes, serverless, databases
+- GPU supply, inference platforms, edge compute, cost optimization
+
+### Security/Privacy
+
+- Vulnerabilities, supply-chain attacks, identity, compliance, AI safety, data governance
+
+### Startup/Funding
+
+- Seed to IPO funding, acquisitions, shutdowns, category creation, Korean startups, global AI startups
 
 ### OpenClaw Ecosystem
-- Anthropic announcements
-- Claude API updates
-- Community showcase
-- openclaw, harnessclaw trends
+
+- Anthropic announcements, Claude API updates, community showcases, OpenClaw, HarnessClaw
+
+## Scoring Criteria
+
+| Score | Meaning | Criteria |
+|-------|---------|----------|
+| 9-10 | Critical | Industry-wide shift, immediate action needed, major platform or regulation change |
+| 7-8 | High | Major company move, strong adoption signal, pricing or capability change |
+| 5-6 | Medium | Useful signal, early traction, worth monitoring |
+| 1-4 | Low | Minor update, rumor, narrow relevance |
+
+Raise the score when a trend affects roadmap, budget, hiring, compliance, or competitive positioning. Lower it when evidence is weak, duplicated, or only speculative.
 
 ## Report Format
+
+Use this structure for readable output:
 
 ```markdown
 # Trend Radar YYYY-WXX
 
-**Report Period**: YYYY-MM-DD ~ YYYY-MM-DD  
+**Period**: YYYY-MM-DD to YYYY-MM-DD  
 **Generated**: YYYY-MM-DD  
-**Categories**: AI, SaaS, Korean Startups, OpenClaw
+**Scope**: AI/ML, Developer Tools, SaaS, Cloud/Infra, Security, Startup/Funding, OpenClaw  
+**Signal Count**: 00 reviewed, 00 selected
 
----
+## Executive Summary
 
-## 🔥 Top 3 Highlights
+- **Main shift**: ...
+- **Biggest opportunity**: ...
+- **Biggest risk**: ...
+- **Recommended action**: ...
 
-1. **[Title]** (Importance: ⭐⭐⭐⭐⭐ 9/10)
-   - Summary: ...
-   - Source: [Link]
-   - Why important: ...
+## Top Signals
 
-2. **[Title]** (Importance: ⭐⭐⭐⭐ 8/10)
-   - ...
+| Rank | Signal | Category | Score | Status | Why It Matters |
+|------|--------|----------|-------|--------|----------------|
+| 1 | ... | AI/ML | 9 | Confirmed | ... |
+| 2 | ... | Developer Tools | 8 | Confirmed | ... |
+| 3 | ... | SaaS | 7 | Watch | ... |
 
-3. **[Title]** (Importance: ⭐⭐⭐⭐ 7/10)
-   - ...
+## Action Items
 
----
+- [ ] ...
+- [ ] ...
+- [ ] ...
 
-## 📊 Trends by Category
+## Category Deep Dive
 
 ### AI/ML
-- **Claude 3.5 Sonnet Update**: ...
-- **OpenAI GPT-5 Rumors**: ...
 
-**Change Detection**:
-- ⬆️ AI agent search volume +35% (vs last week)
-- ⬇️ NFT/Web3 mentions -20%
+#### [Signal Title]
 
-### SaaS/Productivity
-- **Notion Q4 Earnings**: ...
-- **Linear New Features**: ...
+- **Score**: 9/10
+- **Status**: Confirmed / Watch / Rumor
+- **What changed**: ...
+- **Why it matters**: ...
+- **Evidence**: [Source name](URL), [Source name](URL)
+- **Impact window**: immediate / 1-3 months / 6-12 months
+- **Watch next**: ...
 
-### OpenClaw Ecosystem
-- **Anthropic Claude 4 Announcement**: ...
-- **Community Showcase**: ...
+### Developer Tools
+
+#### [Signal Title]
+
+- **Score**: 8/10
+- **Status**: Confirmed
+- **What changed**: ...
+- **Why it matters**: ...
+- **Evidence**: [Source name](URL)
+- **Impact window**: ...
+- **Watch next**: ...
+
+## Weekly Stats
+
+| Category | Signals Reviewed | Selected | Critical | vs Last Period |
+|----------|------------------|----------|----------|----------------|
+| AI/ML | 00 | 00 | 00 | +0% |
+| Developer Tools | 00 | 00 | 00 | +0% |
+| SaaS | 00 | 00 | 00 | +0% |
+
+## Watchlist for Next Week
+
+- [ ] ...
+- [ ] ...
+- [ ] ...
+
+## Sources Reviewed
+
+- [Source](URL) - short note
+- [Source](URL) - short note
 
 ---
 
-## 📈 Weekly Stats
-
-| Category | New Articles | Critical Issues | vs Last Week |
-|----------|--------------|-----------------|--------------|
-| AI/ML | 47 | 12 | +5% |
-| SaaS | 23 | 3 | -2% |
-| Korean Startups | 18 | 5 | +12% |
-| OpenClaw | 8 | 2 | +1% |
-
----
-
-## 💡 Insights
-
-- **AI Agent Ecosystem Rapid Growth**: ...
-- **Korea Government AI Regulation Strengthening**: ...
-- **Developer Tools Market Reorganization**: ...
-
----
-
-## 🔮 Keywords to Watch Next Week
-
-- [ ] GPT-5 official announcement
-- [ ] Toss IPO schedule
-- [ ] Claude API price reduction possibility
-
----
-
-**Generated by**: trend-radar v1.0 | 무펭이 🐧
+Generated by `trend-radar`.
 ```
 
-## Importance Score Criteria
+## Writing Guidelines
 
-| Score | Criteria |
-|-------|----------|
-| 9-10 | Industry-wide impact / Immediate action needed |
-| 7-8 | Major player trends / Attention needed |
-| 5-6 | Interesting finding / Reference |
-| 1-4 | Minor impact / Optional |
+- Lead with the conclusion, then provide evidence.
+- Keep each signal compact: one short paragraph or 4-6 bullets.
+- Use tables for comparison and bullets for analysis.
+- Include links for every important claim.
+- Avoid hype words unless the evidence supports them.
+- Do not mix facts and speculation. Use `Confirmed`, `Watch`, or `Rumor`.
+- When data is missing, say what is missing and how that affects confidence.
+
+## Output Location
+
+Save reports to:
+
+```text
+memory/research/trend-YYYY-WXX.md
+```
+
+If the user requests a different scope, include it in the filename:
+
+```text
+memory/research/trend-ai-agents-YYYY-WXX.md
+```
 
 ## Cron Setup Example
 
+Run every Monday at 09:00:
+
 ```bash
-# Every Monday 09:00
 0 9 * * 1 openclaw run trend-radar
 ```
 
 ## Event Bus Integration
 
-Publish event when report generated:
-- Path: `events/trend-update-YYYY-MM-DD.json`
-- Format:
+When a report is generated, publish:
+
+```text
+events/trend-update-YYYY-MM-DD.json
+```
+
+Format:
+
 ```json
 {
   "type": "trend-report-generated",
   "timestamp": "2026-02-14T09:00:00Z",
   "week": "2026-W07",
+  "scope": ["AI/ML", "Developer Tools", "SaaS"],
   "highlights": [
     {
       "title": "...",
       "score": 9,
-      "category": "AI/ML"
+      "category": "AI/ML",
+      "status": "Confirmed"
     }
   ],
-  "totalArticles": 96,
-  "criticalIssues": 3
+  "signalsReviewed": 96,
+  "signalsSelected": 12,
+  "criticalSignals": 3
 }
 ```
 
 ## Customization
 
-Edit keyword list: `workspace/trend-radar-keywords.json`
+Edit keyword configuration at:
+
+```text
+workspace/trend-radar-keywords.json
+```
+
+Example:
+
 ```json
 {
-  "AI": ["Claude", "GPT-5", "Gemini"],
-  "SaaS": ["Notion", "Linear"],
-  "custom": ["MUFI Photobooth", "Kmong"]
+  "AI/ML": ["OpenAI", "Claude", "Gemini", "Llama", "AI agents", "SWE-bench"],
+  "Developer Tools": ["Codex", "GitHub Copilot", "Cursor", "Vercel", "LangGraph"],
+  "SaaS": ["Notion AI", "Linear", "Slack AI"],
+  "OpenClaw": ["OpenClaw", "HarnessClaw", "Claude API"]
 }
 ```
 
----
-
-**trend-radar** | Chad Liu
+Keep keyword lists specific enough to reduce noise, but broad enough to catch new product names and adjacent market shifts.
