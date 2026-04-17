@@ -1,8 +1,8 @@
 # Work Skills
 
-This repository contains local Codex/OpenClaw skills maintained by Chad Liu. Each skill lives in its own directory and keeps its own usage documentation next to `SKILL.md`.
+这是 Chad Liu 维护的本地 Codex/OpenClaw skills 仓库。每个 skill 放在独立目录中，并在自己的目录下维护使用说明。
 
-## Repository Structure
+## 仓库结构
 
 ```text
 .
@@ -11,21 +11,21 @@ This repository contains local Codex/OpenClaw skills maintained by Chad Liu. Eac
 └── tech-trend-radar
 ```
 
-## Available Skills
+## 可用 Skills
 
-| Skill | Purpose | Documentation |
-|-------|---------|---------------|
-| `tech-trend-radar` | Generates current technology and market trend reports from credible sources, model leaderboards, and GitHub momentum. | [`tech-trend-radar/README.md`](tech-trend-radar/README.md) |
+| Skill | 用途 | 文档 |
+|-------|------|------|
+| `tech-trend-radar` | 基于可信来源、模型榜单、GitHub 热度和公司策略变化，生成技术与市场趋势报告。 | [`tech-trend-radar/README.md`](tech-trend-radar/README.md) |
 
-## Repository Guidelines
+## 仓库约定
 
-- Keep repository-wide instructions in this file and `AGENTS.md`.
-- Keep skill-specific usage, examples, report formats, and maintenance notes inside that skill's directory.
-- Add new skills as top-level directories with at least `SKILL.md` and a local `README.md`.
+- 根目录 README 只放仓库级说明和 skill 索引。
+- 每个 skill 的使用示例、输出格式、维护说明放在对应目录下。
+- 新增 skill 时，使用顶层目录，并至少包含 `SKILL.md` 和本地 `README.md`。
 
-## Maintenance
+## 维护
 
-Before committing documentation changes, review the changed files and repository status:
+提交文档变更前，先检查工作区状态：
 
 ```bash
 git status --short
