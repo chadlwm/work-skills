@@ -8,6 +8,7 @@
 .
 ├── README.md
 ├── LICENSE
+├── RELEASE_NOTES.md
 └── tech-trend-radar
 ```
 
@@ -20,6 +21,7 @@
 ## 仓库约定
 
 - 根目录 README 只放仓库级说明和 skill 索引。
+- 发布说明记录在 [`RELEASE_NOTES.md`](RELEASE_NOTES.md)。
 - 每个 skill 的使用示例、输出格式、维护说明放在对应目录下。
 - 新增 skill 时，使用顶层目录，并至少包含 `SKILL.md` 和本地 `README.md`。
 
