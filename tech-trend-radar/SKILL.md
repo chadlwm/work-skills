@@ -16,6 +16,7 @@ Use this skill when the user asks for:
 - AI, SaaS, developer tools, cloud, security, startup, or regulation updates
 - Model reranking, leaderboard changes, and current top model summaries
 - Claude managed agents, Claude agent teams, and Anthropic agent platform updates
+- Major AI product launches such as Claude Design, ChatGPT apps, Gemini product releases, and agent workspaces
 - OpenAI, Anthropic, Google, Microsoft, Meta, xAI, Alibaba Qwen, Zhipu GLM, and major AI lab strategy updates
 - AI field leaders, researchers, founders, and influential builders' public moves and events
 - GitHub Trending and open-source momentum summaries
@@ -28,6 +29,7 @@ Trigger examples:
 Write this week's AI trend report
 Show current top 10 AI models and ranking changes
 Track Claude managed agents and agent teams updates
+Track Claude Design and major AI product launches
 Generate a trend radar for developer tools
 Summarize GitHub Trending for AI agents this month
 Summarize recent market trends in AI agents
@@ -40,14 +42,15 @@ What changed in SaaS and AI this week?
 2. Search by category, not only by generic keywords. Combine company names, product names, ecosystem terms, and event types.
 3. Check model leaderboards for reranking, new entrants, score deltas, and category shifts.
 4. Check Anthropic and Claude agent platform updates, especially managed agents, agent teams, enterprise controls, connectors, and orchestration features.
-5. Check AI field leaders' public moves, talks, essays, projects, company changes, launches, and notable technical opinions.
-6. Check GitHub Trending and repository momentum for relevant categories, languages, and keywords.
-7. Prefer primary and high-signal sources before commentary.
-8. Cross-check major claims with at least two credible sources when possible.
-9. Deduplicate repeated coverage of the same announcement.
-10. Score each item by novelty, impact, source quality, ranking movement, open-source traction, and actionability.
-11. Separate confirmed facts from interpretation. Label uncertain items as `Watch`.
-12. Re-check the latest available sources every run, even if the same topic appeared in a previous report.
+5. Check major AI product launches and new surfaces such as Claude Design, ChatGPT apps, Gemini product releases, coding workspaces, agent workspaces, and enterprise AI apps.
+6. Check AI field leaders' public moves, talks, essays, projects, company changes, launches, and notable technical opinions.
+7. Check GitHub Trending and repository momentum for relevant categories, languages, and keywords.
+8. Prefer primary and high-signal sources before commentary.
+9. Cross-check major claims with at least two credible sources when possible.
+10. Deduplicate repeated coverage of the same announcement.
+11. Score each item by novelty, impact, source quality, ranking movement, open-source traction, and actionability.
+12. Separate confirmed facts from interpretation. Label uncertain items as `Watch`.
+13. Re-check the latest available sources every run, even if the same topic appeared in a previous report.
 
 ## Time Windows
 
@@ -92,6 +95,7 @@ Use higher-priority sources first:
 | 1 | Official announcements | company blogs, product release notes, API changelogs, pricing pages |
 | 1 | Primary technical artifacts | GitHub releases, RFCs, benchmark reports, model cards, research papers |
 | 1 | Anthropic / Claude updates | Anthropic news, Claude docs, Claude Code docs, API changelog, enterprise admin docs |
+| 1 | Major product launches | official announcements, product docs, launch posts, pricing pages, demo videos, release events |
 | 1 | Model leaderboards | LMArena/Text Arena, Artificial Analysis, LiveBench, SWE-bench, OpenRouter rankings |
 | 1 | GitHub momentum | GitHub Trending, stars, forks, releases, issue velocity, contributor activity |
 | 2 | AI people signals | personal blogs, X/LinkedIn posts, talks, podcasts, GitHub, papers, company announcements |
@@ -164,6 +168,28 @@ For each Claude agent signal, capture:
 - **Evidence**: official Anthropic source first; add credible secondary analysis only when useful
 - **Action**: try, migrate, monitor, update policy, or compare with OpenAI/Codex/Gemini/Copilot alternatives
 
+## Major Product Launch Signals
+
+Track heavyweight AI product launches as first-class signals, not only as company strategy notes. Include new user-facing surfaces, workflows, design tools, app platforms, workspaces, and agent products that may change adoption behavior.
+
+Monitor these launch types:
+
+- **Creation and design products**: Claude Design, ChatGPT design/canvas features, Gemini creative tools, image/video/audio creation workflows
+- **Agent workspaces**: managed agents, agent teams, collaborative agent environments, coding workspaces, browser/computer-use products
+- **Consumer and enterprise apps**: standalone apps, mobile/desktop apps, integrations, connectors, admin-controlled products
+- **Developer platforms**: APIs, SDKs, app stores, extensions, templates, evaluation or deployment surfaces
+- **Distribution shifts**: bundling, pricing, free tiers, enterprise rollout, partner channels, ecosystem integrations
+
+For each major product launch, capture:
+
+- **Product**: name, company, category, and launch date
+- **Launch type**: new product, major redesign, beta, GA, pricing/package change, or ecosystem expansion
+- **Core change**: what users can now do that was not possible or practical before
+- **Affected users**: consumers, designers, developers, enterprises, educators, creators, or agent builders
+- **Competitive frame**: nearest alternatives from OpenAI, Anthropic, Google, Microsoft/GitHub, Meta, Alibaba, Zhipu, or startups
+- **Evidence and delta**: official source, credible secondary coverage, and what changed since the previous report
+- **Action**: test, adopt, compare, monitor, update roadmap, or ignore
+
 ## Company Strategy Signals
 
 Track strategic changes from major AI companies every run, especially OpenAI, Anthropic, Alibaba Qwen, and Zhipu AI. Include Google, Microsoft/GitHub, Meta, xAI, Mistral, DeepSeek, Moonshot AI, Baidu, Tencent, ByteDance, and other major labs when relevant.
@@ -225,6 +251,7 @@ For each notable repository, capture:
 - Agent frameworks: LangChain, LangGraph, AutoGen, CrewAI, OpenAI Agents SDK
 - Capabilities: multimodal AI, coding agents, RAG, long context, reasoning, evaluation
 - Claude agents: managed agents, agent teams, Claude Code, MCP, tool use, computer use, enterprise controls
+- Major product launches: Claude Design, ChatGPT apps, Gemini products, coding workspaces, agent workspaces, creative tools
 - Business signals: AI startup funding, enterprise adoption, AI pricing, AI regulation
 - Company strategy: OpenAI, Anthropic, Alibaba/Tongyi Qianwen/Qwen, Zhipu AI/GLM, Google Gemini/Gemma, Microsoft/GitHub, Meta, xAI, Mistral, DeepSeek, Moonshot AI, Baidu, Tencent, ByteDance
 - People signals: Andrej Karpathy, Ilya Sutskever, Fei-Fei Li, Yann LeCun, Geoffrey Hinton, Andrew Ng, Demis Hassabis, Dario Amodei, Sam Altman, Noam Shazeer, Jeff Dean
@@ -233,6 +260,7 @@ For each notable repository, capture:
 ### Developer Tools
 
 - Coding assistants: Codex, GitHub Copilot, Cursor, Claude Code, Windsurf
+- Product launches: Claude Design, ChatGPT apps, Gemini workspaces, Copilot product updates, AI design and creation tools
 - Dev platforms: GitHub, GitLab, Linear, Vercel, Netlify, Supabase
 - Tooling: CI/CD, observability, testing, package managers, IDE extensions
 - Agent platforms: Claude managed agents, Claude agent teams, Codex agents, Copilot coding agent, Gemini agents
@@ -241,6 +269,7 @@ For each notable repository, capture:
 ### SaaS/Productivity
 
 - Notion, Slack, Linear, Atlassian, Salesforce, HubSpot, Microsoft 365, Google Workspace
+- Major AI app launches: Claude Design, ChatGPT apps, Gemini apps, Microsoft Copilot surfaces, Notion/Linear/Slack AI updates
 - AI features, workflow automation, collaboration, pricing, enterprise adoption
 
 ### Cloud/Infrastructure
@@ -281,7 +310,7 @@ Use this structure for readable output:
 **Period**: YYYY-MM-DD to YYYY-MM-DD  
 **Window**: 1w / 1m / 3m  
 **Generated**: YYYY-MM-DD  
-**Scope**: AI/ML, Developer Tools, SaaS, Cloud/Infra, Security, Startup/Funding, Agent Platform Ecosystem  
+**Scope**: AI/ML, AI Products, Developer Tools, SaaS, Cloud/Infra, Security, Startup/Funding, Agent Platform Ecosystem  
 **Signal Count**: 00 reviewed, 00 selected
 
 ## Executive Summary
@@ -291,6 +320,7 @@ Use this structure for readable output:
 - **3m signal**: ...
 - **Model reranking**: ...
 - **Claude agent signal**: ...
+- **Major product launch**: ...
 - **Company strategy**: ...
 - **People signal**: ...
 - **Updated from previous report**: ...
@@ -338,6 +368,13 @@ Use this structure for readable output:
 | ... | managed agents | 1w | Confirmed | ... | ... |
 | ... | agent teams | 1m | Watch | ... | ... |
 
+## Major Product Launch Watch
+
+| Product | Company | Category | Window | Status | Core Change | Competitive Frame | Action |
+|---------|---------|----------|--------|--------|-------------|-------------------|--------|
+| Claude Design | Anthropic | design / creation / workspace | 1w | Confirmed | ... | ChatGPT / Gemini / Copilot | ... |
+| ... | ... | agent workspace / app / developer platform | 1m | Watch | ... | ... | ... |
+
 ## Company Strategy Watch
 
 | Company | Latest Move | Strategy Direction | Window | Status | Implication |
@@ -376,6 +413,7 @@ Use this structure for readable output:
 - **Core change since last report**: new / updated / continuing / resolved
 - **Evidence**: [Source name](URL), [Source name](URL)
 - **Claude agent signal**: managed agents / agent teams / Claude Code / API primitive if relevant
+- **Major product launch**: product, launch type, affected users, competitive frame if relevant
 - **Company strategy**: company, strategic direction, latest move if relevant
 - **People signal**: person, event, source, impact if relevant
 - **Model reranking**: leaderboard, rank, score/usage, change reason if relevant
@@ -395,6 +433,7 @@ Use this structure for readable output:
 - **Core change since last report**: new / updated / continuing / resolved
 - **Evidence**: [Source name](URL)
 - **Claude agent signal**: managed agents / agent teams / Claude Code / API primitive if relevant
+- **Major product launch**: product, launch type, affected users, competitive frame if relevant
 - **Company strategy**: company, strategic direction, latest move if relevant
 - **People signal**: person, event, source, impact if relevant
 - **Model reranking**: leaderboard, rank, score/usage, change reason if relevant
@@ -434,6 +473,7 @@ Generated by `tech-trend-radar`.
 - Include links for every important claim.
 - For model reranking, include the leaderboard name, timestamp, metric definition, and current top 10.
 - For OpenAI, Anthropic, Alibaba Qwen, and Zhipu AI strategy, include latest public moves, strategic direction, and implication in every monthly report.
+- For major product launches such as Claude Design, include the product surface, launch type, core user workflow change, competitive frame, and recommended action.
 - For AI people signals, include only public, sourceable events and explain the strategic or technical implication.
 - For Claude agent updates, prefer official Anthropic sources and extract the core change, affected users, and recommended action.
 - Include GitHub repository links for open-source signals.
@@ -513,6 +553,19 @@ Format:
     ],
     "coreChanges": ["..."]
   },
+  "majorProductLaunches": [
+    {
+      "product": "Claude Design",
+      "company": "Anthropic",
+      "category": "design / creation / workspace",
+      "launchType": "new product / beta / GA / redesign",
+      "window": "1w",
+      "status": "Confirmed",
+      "coreChange": "...",
+      "competitiveFrame": "ChatGPT / Gemini / Copilot",
+      "action": "..."
+    }
+  ],
   "companyStrategy": [
     {
       "company": "OpenAI",
@@ -586,15 +639,16 @@ Example:
 
 ```json
 {
-  "AI/ML": ["OpenAI", "Claude", "Gemini", "Gemma", "Google Gemma", "Llama", "Qwen", "通义千问", "GLM", "智谱", "DeepSeek", "Kimi", "文心", "混元", "豆包", "AI agents", "SWE-bench", "model reranking", "Claude managed agents", "Claude agent teams"],
+  "AI/ML": ["OpenAI", "Claude", "Claude Design", "Gemini", "Gemma", "Google Gemma", "Llama", "Qwen", "通义千问", "GLM", "智谱", "DeepSeek", "Kimi", "文心", "混元", "豆包", "AI agents", "SWE-bench", "model reranking", "Claude managed agents", "Claude agent teams"],
   "Company Strategy": ["OpenAI strategy", "Anthropic strategy", "Alibaba Qwen strategy", "阿里千问趋势", "通义千问", "Zhipu AI strategy", "智谱趋势", "GLM", "Google Gemini strategy", "Google Gemma strategy", "Gemma open model", "Microsoft AI strategy", "Meta AI strategy", "xAI strategy", "DeepSeek strategy", "Moonshot AI strategy", "Baidu ERNIE strategy", "Tencent Hunyuan strategy", "ByteDance Doubao strategy", "AI pricing", "enterprise AI", "consumer AI apps", "agent platform strategy"],
+  "Major Product Launches": ["Claude Design", "Anthropic product launch", "ChatGPT apps", "ChatGPT product launch", "Gemini apps", "Gemini product launch", "Microsoft Copilot product launch", "AI design tool", "AI creation tool", "agent workspace", "coding workspace", "AI app platform", "new AI product", "major AI launch", "GA", "beta", "pricing launch"],
   "AI People": ["Andrej Karpathy", "Ilya Sutskever", "Fei-Fei Li", "Yann LeCun", "Geoffrey Hinton", "Andrew Ng", "Demis Hassabis", "Dario Amodei", "Sam Altman", "Greg Brockman", "Noam Shazeer", "Jeff Dean", "Clem Delangue", "Jim Fan", "Percy Liang", "Soumith Chintala", "Jeremy Howard", "AI founder moves", "AI researcher talks", "AI papers", "AI courses", "AI startup launch"],
-  "Claude Agents": ["Claude managed agents", "Claude agent teams", "Claude Code", "Anthropic agents", "MCP", "tool use", "computer use", "agent orchestration", "enterprise controls", "connectors"],
+  "Claude Agents": ["Claude Design", "Claude managed agents", "Claude agent teams", "Claude Code", "Anthropic agents", "MCP", "tool use", "computer use", "agent orchestration", "enterprise controls", "connectors"],
   "Model Reranking": ["LMArena", "Text Arena", "Artificial Analysis", "LiveBench", "SWE-bench", "OpenRouter rankings", "open-weight model leaderboard", "Gemma ranking", "Llama ranking", "Chinese model leaderboard", "Qwen ranking", "GLM ranking", "DeepSeek ranking", "Kimi ranking", "top 10 AI models"],
-  "Developer Tools": ["Codex", "GitHub Copilot", "Cursor", "Claude Code", "Vercel", "LangGraph", "GitHub Trending"],
+  "Developer Tools": ["Codex", "GitHub Copilot", "Cursor", "Claude Code", "Claude Design", "Vercel", "LangGraph", "GitHub Trending"],
   "GitHub Trending": ["AI", "LLM", "agent", "RAG", "MCP", "devtools", "security", "TypeScript", "Python", "Rust", "Go"],
   "SaaS": ["Notion AI", "Linear", "Slack AI"],
-  "Agent Platform Ecosystem": ["Anthropic", "Claude API", "Claude managed agents", "Claude agent teams", "Claude Code", "OpenAI", "Codex", "OpenAI Agents SDK", "Alibaba Qwen", "通义千问", "Zhipu GLM", "智谱", "Google Gemini", "Google Gemma", "Gemma", "Gemini agents", "GitHub Copilot", "Copilot coding agent", "MCP", "OpenClaw", "HarnessClaw"],
+  "Agent Platform Ecosystem": ["Anthropic", "Claude API", "Claude Design", "Claude managed agents", "Claude agent teams", "Claude Code", "OpenAI", "Codex", "OpenAI Agents SDK", "Alibaba Qwen", "通义千问", "Zhipu GLM", "智谱", "Google Gemini", "Google Gemma", "Gemma", "Gemini agents", "GitHub Copilot", "Copilot coding agent", "MCP", "OpenClaw", "HarnessClaw"],
   "windows": ["1w", "1m", "3m"]
 }
 ```
