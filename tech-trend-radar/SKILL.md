@@ -17,6 +17,7 @@ Use this skill when the user asks for:
 - Model reranking, leaderboard changes, and current top model summaries
 - Claude managed agents, Claude agent teams, and Anthropic agent platform updates
 - OpenAI, Anthropic, Google, Microsoft, Meta, xAI, Alibaba Qwen, Zhipu GLM, and major AI lab strategy updates
+- AI field leaders, researchers, founders, and influential builders' public moves and events
 - GitHub Trending and open-source momentum summaries
 - Market signal summaries for planning, investing, product strategy, or competitive tracking
 - A concise report that distinguishes major shifts from ordinary news
@@ -39,13 +40,14 @@ What changed in SaaS and AI this week?
 2. Search by category, not only by generic keywords. Combine company names, product names, ecosystem terms, and event types.
 3. Check model leaderboards for reranking, new entrants, score deltas, and category shifts.
 4. Check Anthropic and Claude agent platform updates, especially managed agents, agent teams, enterprise controls, connectors, and orchestration features.
-5. Check GitHub Trending and repository momentum for relevant categories, languages, and keywords.
-6. Prefer primary and high-signal sources before commentary.
-7. Cross-check major claims with at least two credible sources when possible.
-8. Deduplicate repeated coverage of the same announcement.
-9. Score each item by novelty, impact, source quality, ranking movement, open-source traction, and actionability.
-10. Separate confirmed facts from interpretation. Label uncertain items as `Watch`.
-11. Re-check the latest available sources every run, even if the same topic appeared in a previous report.
+5. Check AI field leaders' public moves, talks, essays, projects, company changes, launches, and notable technical opinions.
+6. Check GitHub Trending and repository momentum for relevant categories, languages, and keywords.
+7. Prefer primary and high-signal sources before commentary.
+8. Cross-check major claims with at least two credible sources when possible.
+9. Deduplicate repeated coverage of the same announcement.
+10. Score each item by novelty, impact, source quality, ranking movement, open-source traction, and actionability.
+11. Separate confirmed facts from interpretation. Label uncertain items as `Watch`.
+12. Re-check the latest available sources every run, even if the same topic appeared in a previous report.
 
 ## Time Windows
 
@@ -92,11 +94,55 @@ Use higher-priority sources first:
 | 1 | Anthropic / Claude updates | Anthropic news, Claude docs, Claude Code docs, API changelog, enterprise admin docs |
 | 1 | Model leaderboards | LMArena/Text Arena, Artificial Analysis, LiveBench, SWE-bench, OpenRouter rankings |
 | 1 | GitHub momentum | GitHub Trending, stars, forks, releases, issue velocity, contributor activity |
+| 2 | AI people signals | personal blogs, X/LinkedIn posts, talks, podcasts, GitHub, papers, company announcements |
 | 2 | Business records | funding announcements, acquisition news, earnings calls, regulatory filings |
 | 2 | Trusted industry media | The Verge, TechCrunch, The Information, Stratechery, VentureBeat, The Pragmatic Engineer |
 | 3 | Community signals | Hacker News, Reddit, X posts, Discord/Slack communities, GitHub stars/issues |
 
 Community signals should support a trend, not be the only evidence for a high-impact claim.
+
+## AI People Signals
+
+Track notable AI people because individual moves often foreshadow new products, research directions, company strategy, or developer ecosystem shifts.
+
+Monitor these event types:
+
+- **Career moves**: founding a company, joining/leaving a lab, advisory roles, leadership changes
+- **Project launches**: new courses, repos, products, startups, research initiatives, open-source releases
+- **Public theses**: essays, talks, podcasts, technical threads, model/eval opinions, product strategy views
+- **Research impact**: papers, benchmark work, architecture ideas, safety positions, agent workflows
+- **Ecosystem influence**: tools adopted by builders, community reactions, GitHub activity, course popularity
+
+For each people signal, capture:
+
+- **Person**: name, affiliation, and role
+- **Event**: what happened, with date and source
+- **Area**: research, agents, models, coding, safety, education, product, startup, or infrastructure
+- **Why it matters**: what this implies for builders, companies, talent, or market direction
+- **Continuity**: new / updated / continuing / resolved compared with earlier reports
+
+Priority people list:
+
+- Andrej Karpathy
+- Ilya Sutskever
+- Fei-Fei Li
+- Yann LeCun
+- Geoffrey Hinton
+- Andrew Ng
+- Demis Hassabis
+- Dario Amodei
+- Sam Altman
+- Greg Brockman
+- Noam Shazeer
+- Jeff Dean
+- Clem Delangue
+- Jim Fan
+- Percy Liang
+- Soumith Chintala
+- Jeremy Howard
+- Li Fei-Fei / World Labs updates, when relevant
+
+Add other people when they drive a material signal. Do not include personality gossip; focus on public, sourceable events.
 
 ## Anthropic / Claude Agent Signals
 
@@ -181,6 +227,7 @@ For each notable repository, capture:
 - Claude agents: managed agents, agent teams, Claude Code, MCP, tool use, computer use, enterprise controls
 - Business signals: AI startup funding, enterprise adoption, AI pricing, AI regulation
 - Company strategy: OpenAI, Anthropic, Alibaba/Tongyi Qianwen/Qwen, Zhipu AI/GLM, Google Gemini/Gemma, Microsoft/GitHub, Meta, xAI, Mistral, DeepSeek, Moonshot AI, Baidu, Tencent, ByteDance
+- People signals: Andrej Karpathy, Ilya Sutskever, Fei-Fei Li, Yann LeCun, Geoffrey Hinton, Andrew Ng, Demis Hassabis, Dario Amodei, Sam Altman, Noam Shazeer, Jeff Dean
 - Benchmarks and reranking: LMArena/Text Arena, Artificial Analysis, LiveBench, SWE-bench, OpenRouter, model cards, eval reports
 
 ### Developer Tools
@@ -245,6 +292,7 @@ Use this structure for readable output:
 - **Model reranking**: ...
 - **Claude agent signal**: ...
 - **Company strategy**: ...
+- **People signal**: ...
 - **Updated from previous report**: ...
 - **Biggest opportunity**: ...
 - **Biggest risk**: ...
@@ -301,6 +349,13 @@ Use this structure for readable output:
 | Google Gemini/Gemma | ... | flagship models / open-weight models / ecosystem / distribution | 1m | Watch | ... |
 | Microsoft/GitHub | ... | developer tools / enterprise | 1m | Watch | ... |
 
+## AI People Watch
+
+| Person | Affiliation | Event | Area | Window | Status | Why It Matters |
+|--------|-------------|-------|------|--------|--------|----------------|
+| Andrej Karpathy | ... | ... | education / agents / coding / startup | 1m | Updated | ... |
+| ... | ... | ... | research / product / safety | 1m | Watch | ... |
+
 ## Action Items
 
 - [ ] ...
@@ -322,6 +377,7 @@ Use this structure for readable output:
 - **Evidence**: [Source name](URL), [Source name](URL)
 - **Claude agent signal**: managed agents / agent teams / Claude Code / API primitive if relevant
 - **Company strategy**: company, strategic direction, latest move if relevant
+- **People signal**: person, event, source, impact if relevant
 - **Model reranking**: leaderboard, rank, score/usage, change reason if relevant
 - **GitHub signal**: repo link, stars/forks/releases if relevant
 - **Impact window**: immediate / 1-3 months / 6-12 months
@@ -340,6 +396,7 @@ Use this structure for readable output:
 - **Evidence**: [Source name](URL)
 - **Claude agent signal**: managed agents / agent teams / Claude Code / API primitive if relevant
 - **Company strategy**: company, strategic direction, latest move if relevant
+- **People signal**: person, event, source, impact if relevant
 - **Model reranking**: leaderboard, rank, score/usage, change reason if relevant
 - **GitHub signal**: repo link, stars/forks/releases if relevant
 - **Impact window**: ...
@@ -377,6 +434,7 @@ Generated by `tech-trend-radar`.
 - Include links for every important claim.
 - For model reranking, include the leaderboard name, timestamp, metric definition, and current top 10.
 - For OpenAI, Anthropic, Alibaba Qwen, and Zhipu AI strategy, include latest public moves, strategic direction, and implication in every monthly report.
+- For AI people signals, include only public, sourceable events and explain the strategic or technical implication.
 - For Claude agent updates, prefer official Anthropic sources and extract the core change, affected users, and recommended action.
 - Include GitHub repository links for open-source signals.
 - If a topic was included in a previous report, still refresh it and write the newest delta.
@@ -489,6 +547,17 @@ Format:
       "implication": "..."
     }
   ],
+  "peopleSignals": [
+    {
+      "person": "Andrej Karpathy",
+      "affiliation": "...",
+      "event": "...",
+      "area": "education / agents / coding",
+      "window": "1m",
+      "status": "Updated",
+      "whyItMatters": "..."
+    }
+  ],
   "claudeAgentSignals": [
     {
       "signal": "...",
@@ -519,6 +588,7 @@ Example:
 {
   "AI/ML": ["OpenAI", "Claude", "Gemini", "Gemma", "Google Gemma", "Llama", "Qwen", "通义千问", "GLM", "智谱", "DeepSeek", "Kimi", "文心", "混元", "豆包", "AI agents", "SWE-bench", "model reranking", "Claude managed agents", "Claude agent teams"],
   "Company Strategy": ["OpenAI strategy", "Anthropic strategy", "Alibaba Qwen strategy", "阿里千问趋势", "通义千问", "Zhipu AI strategy", "智谱趋势", "GLM", "Google Gemini strategy", "Google Gemma strategy", "Gemma open model", "Microsoft AI strategy", "Meta AI strategy", "xAI strategy", "DeepSeek strategy", "Moonshot AI strategy", "Baidu ERNIE strategy", "Tencent Hunyuan strategy", "ByteDance Doubao strategy", "AI pricing", "enterprise AI", "consumer AI apps", "agent platform strategy"],
+  "AI People": ["Andrej Karpathy", "Ilya Sutskever", "Fei-Fei Li", "Yann LeCun", "Geoffrey Hinton", "Andrew Ng", "Demis Hassabis", "Dario Amodei", "Sam Altman", "Greg Brockman", "Noam Shazeer", "Jeff Dean", "Clem Delangue", "Jim Fan", "Percy Liang", "Soumith Chintala", "Jeremy Howard", "AI founder moves", "AI researcher talks", "AI papers", "AI courses", "AI startup launch"],
   "Claude Agents": ["Claude managed agents", "Claude agent teams", "Claude Code", "Anthropic agents", "MCP", "tool use", "computer use", "agent orchestration", "enterprise controls", "connectors"],
   "Model Reranking": ["LMArena", "Text Arena", "Artificial Analysis", "LiveBench", "SWE-bench", "OpenRouter rankings", "open-weight model leaderboard", "Gemma ranking", "Llama ranking", "Chinese model leaderboard", "Qwen ranking", "GLM ranking", "DeepSeek ranking", "Kimi ranking", "top 10 AI models"],
   "Developer Tools": ["Codex", "GitHub Copilot", "Cursor", "Claude Code", "Vercel", "LangGraph", "GitHub Trending"],
